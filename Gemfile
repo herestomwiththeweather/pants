@@ -3,9 +3,7 @@ source 'https://rubygems.org'
 # Core
 gem 'rails', '4.1.4'
 gem 'pg'
-gem 'quiet_assets'
 gem 'puma'
-gem 'rack-cache', :require => 'rack/cache'
 gem 'timers'
 
 # Frontend
@@ -13,7 +11,6 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
-gem 'turbolinks'
 gem 'slim-rails'
 gem 'compass-rails'
 gem 'simple_form'
@@ -23,7 +20,6 @@ gem 'kaminari'
 
 # Binary asset handling
 gem 'dragonfly'
-gem 'dragonfly-s3_data_store'
 
 # Authorization/Authentication
 gem 'cancancan'
@@ -35,9 +31,6 @@ gem 'jbuilder', '~> 2.0'
 # HTTP interactions
 gem 'httparty'
 gem 'webmention', github: 'indieweb/mention-client-ruby'
-
-# Monitoring
-gem 'appsignal'
 
 # Development & Testing only
 #
@@ -61,6 +54,10 @@ group :test, :development do
   gem 'dotenv-rails'
 end
 
+group :development do
+  gem 'quiet_assets'
+end
+
 # Testing only.
 #
 group :test do
@@ -82,6 +79,5 @@ group :tools do
 
   # Capistrano
   gem 'capistrano-rails'
-  gem 'capistrano-chruby'
   gem 'capistrano-bundler'
 end
