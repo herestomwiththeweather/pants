@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: pants_production
-  username: pants
+  username: tbbrown
   password: <%= ENV['PANTS_DATABASE_PASSWORD'] %>
